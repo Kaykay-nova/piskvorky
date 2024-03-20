@@ -20,6 +20,7 @@ body {
   display: flex;
   justify-content: center;
   font: 16px/1.5 sans-serif;
+  padding: 20px;
 }
 
 h1 {
