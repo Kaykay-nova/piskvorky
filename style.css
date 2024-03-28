@@ -8,10 +8,10 @@
 
 * {
   margin: 0;
+  box-sizing: border-box;
 }
 
 html {
-  box-sizing: border-box;
   min-height: 100vh;
   background-image: linear-gradient(#615dad, #ffc8da);
 }
@@ -32,7 +32,7 @@ p {
   padding-top: 1.5rem;
 }
 
-img {
+.main-img {
   max-width: 100%;
   border-radius: 15px 15px 0 0;
 }
@@ -82,5 +82,105 @@ a {
 
 .container__buttons--blue:hover {
   background-color: #0090e9;
+  cursor: pointer;
+}
+
+/* styl hra */
+
+.field-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 80vmin;
+  border: none;
+  color: white;
+}
+
+.field-content > h1 {
+  text-align: center;
+  font-size: 3.5rem;
+}
+
+
+.field-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+}
+
+.field-player {
+  display: flex;
+}
+
+.circle {
+  width: 20px;
+}
+
+.field-player > p {
+  padding: 0 10px 0 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+
+.field-icon {
+  display: flex;
+}
+
+.icon-home, .icon-restart {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.icon-home {
+  background-image: url('home.svg');
+  background-color: #1fcca4;
+  margin-right: 7px;
+}
+
+.icon-home:hover {
+  background-color: #1cbb96;
+}
+
+.icon-restart {
+  background-image: url('restart.svg');
+  background-color: #0197f6;
+}
+
+.icon-restart:hover {
+  background-color: #0090e9;
+}
+
+
+/* hrací pole */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  box-shadow: 1px 1px 9px #3d3d3d;
+}
+
+
+td {
+  border: 1px solid black;  
+  width: calc(80vmin / 10);
+  height: calc(80vmin / 10);
+}
+
+.field-btn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.443);
+}
+
+.field-btn:hover, .field-btn:focus {
+  background-color: rgba(255, 255, 255, 0.721);
   cursor: pointer;
 }
