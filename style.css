@@ -137,7 +137,7 @@ a {
 }
 
 .icon-home {
-  background-image: url('home.svg');
+  background-image: url('images/home.svg');
   background-color: #1fcca4;
   margin-right: 7px;
 }
@@ -147,7 +147,7 @@ a {
 }
 
 .icon-restart {
-  background-image: url('restart.svg');
+  background-image: url('images/restart.svg');
   background-color: #0197f6;
 }
 
