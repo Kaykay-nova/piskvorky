@@ -114,6 +114,7 @@ a {
 
 .circle {
   width: 20px;
+  filter: invert(100%);
 }
 
 .field-player > p {
@@ -178,9 +179,21 @@ td {
   height: 100%;
   border: none;
   background-color: rgba(255, 255, 255, 0.443);
+  background-repeat: no-repeat;
+  background-position: center;  
 }
 
 .field-btn:hover, .field-btn:focus {
   background-color: rgba(255, 255, 255, 0.721);
   cursor: pointer;
+}
+
+/* piskvorky */
+
+.field-btn__circle {
+  background-image: url(images/circle.svg);
+}
+
+.field-btn__cross {
+  background-image: url(images/cross.svg);
 }
