@@ -10,7 +10,7 @@ const selectBtn = (event) => {
   event.target.disabled === true;
   currentPlayer = currentPlayer === 'circle' ? 'cross' : 'circle';
   }
-  //změna obrázku hráče nad polem
+  
   const playerIcon = document.getElementById('icon-player');
     playerIcon.src = currentPlayer === 'circle' ? 'images/circle.svg' : 'images/cross.svg';
 };
@@ -19,3 +19,19 @@ const buttons = document.querySelectorAll('.field-btn');
 buttons.forEach((button) => {
   button.addEventListener('click', selectBtn);
 });
+
+//Restart hry
+
+const restartBtn = document.querySelector('.icon-restart');
+
+const confirmRestart = (event) => {
+  const confirmation = confirm('Opravdu chceš začít hrát znovu?');
+  
+  if (confirmation) {
+    window.location.href = 'hra.html';
+  } else {
+    event.preventDefault();
+  }
+};
+
+restartBtn.addEventListener('click', confirmRestart);
