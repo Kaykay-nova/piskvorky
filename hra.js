@@ -1,4 +1,7 @@
-let currentPlayer = 'circle'
+import { findWinner } from 'https://unpkg.com/piskvorky@0.1.4';
+
+let currentPlayer = 'circle';
+const buttons = document.querySelectorAll('.field-btn');
 
 const selectBtn = (event) => {
   if (!event.target.classList.contains('field-btn__circle') && !event.target.classList.contains('field-btn__cross')) {
@@ -7,15 +10,21 @@ const selectBtn = (event) => {
     } else {
       event.target.classList.add('field-btn__cross');
     }
-  event.target.disabled === true;
-  currentPlayer = currentPlayer === 'circle' ? 'cross' : 'circle';
+    event.target.disabled = true; 
+    currentPlayer = currentPlayer === 'circle' ? 'cross' : 'circle';
+
+    const winner = findWinner(symbol);
+    if (winner === 'o' || winner === 'x') {
+        alert(`Vyhrál hráč se symbolem ${winner} !`);
+    } else if (winner === 'tie') {
+        alert('Hra skončila remízou!');
+    }
   }
   
   const playerIcon = document.getElementById('icon-player');
     playerIcon.src = currentPlayer === 'circle' ? 'images/circle.svg' : 'images/cross.svg';
 };
 
-const buttons = document.querySelectorAll('.field-btn');
 buttons.forEach((button) => {
   button.addEventListener('click', selectBtn);
 });
