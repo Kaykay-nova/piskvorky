@@ -26,9 +26,15 @@ const selectBtn = (event) => {
 
     const winner = findWinner(symbol);
     if (winner === 'o' || winner === 'x') {
-        alert(`Vyhrál hráč se symbolem ${winner} !`);
+      setTimeout(() => {
+        alert(`Vyhrál hráč s ${winner} !`);
+        location.reload();
+      }, 150);
     } else if (winner === 'tie') {
+      setTimeout(() => {
         alert('Hra skončila remízou!');
+        location.reload();
+      }, 150);
     }
   }
   
