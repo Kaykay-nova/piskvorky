@@ -13,6 +13,17 @@ const selectBtn = (event) => {
     event.target.disabled = true; 
     currentPlayer = currentPlayer === 'circle' ? 'cross' : 'circle';
 
+    // kontrola výhry po každém tahu
+    const symbol = [...buttons].map((button) => {
+      if (button.classList.contains('field-btn__circle')) {
+        return 'o';
+      } else if (button.classList.contains('field-btn__cross')) {
+        return 'x';
+      } else {
+        return '_';
+      }
+    });
+
     const winner = findWinner(symbol);
     if (winner === 'o' || winner === 'x') {
         alert(`Vyhrál hráč se symbolem ${winner} !`);
