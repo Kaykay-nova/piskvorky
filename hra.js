@@ -27,7 +27,7 @@ const selectBtn = (event) => {
     const winner = findWinner(symbol);
     if (winner === 'o' || winner === 'x') {
       setTimeout(() => {
-        alert(`Vyhrál hráč s ${winner} !`);
+        alert(`Vyhrál hráč se symbolem ${winner} !`);
         location.reload();
       }, 150);
     } else if (winner === 'tie') {
