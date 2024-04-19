@@ -106,6 +106,7 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 18px 0;
+  flex-wrap: wrap;
 }
 
 .field-player {
@@ -199,6 +200,7 @@ td {
 
 .field-btn__circle,
 .field-btn__cross {
+  background-size: 60%;
   animation: zoomIn 0.15s ease-in;
 }
 
