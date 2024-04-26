@@ -30,12 +30,12 @@ const apiPlayer = async () => {
 
   const data = await response.json();
   const { x, y } = data.position;
-  const field = buttons[x + y * 10];
+  const index = x + y * 10;
+  const field = buttons[index];
   field.click();
 };
 
 const selectBtn = (event) => {
-  
   if (
     !event.target.classList.contains('field-btn__circle') &&
     !event.target.classList.contains('field-btn__cross')
